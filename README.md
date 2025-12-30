@@ -13,6 +13,8 @@
 - **Security**: Rate limiting, localized file storage, and secure authentication.
 - **Hero Seeding**: Admins can populate the database with heroes and images via [ridwaanhall/api-mobilelegends](https://github.com/ridwaanhall/api-mobilelegends) (unofficial MLBB API).
 
+
+
 ## 🛠️ Tech Stack
 
 **Frontend**
@@ -131,6 +133,18 @@ ml-build-keeper/
 │   └── uploads/            # Local image storage
 └── package.json            # Root orchestration scripts
 ```
+
+## 📸 Preview
+
+![Preview 1](./preview/01.png)
+
+![Preview 2](./preview/02.png)
+
+![Preview 3](./preview/03.png)
+
+![Preview 4](./preview/04.png)
+
+![Preview 5](./preview/05.png)
 
 ## 📜 License
 
