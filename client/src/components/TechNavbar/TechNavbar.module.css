@@ -1,0 +1,164 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(5, 11, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--tech-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  width: 24px;
+  height: 24px;
+  background: var(--tech-primary);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 0 10px var(--tech-primary);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.link {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  color: var(--tech-text-secondary);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--tech-primary);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px var(--tech-primary);
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.link:hover::after,
+.activeLink::after {
+  width: 100%;
+}
+
+.activeLink {
+  color: #fff;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  color: var(--tech-primary);
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+
+.mobileToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: var(--tech-primary);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .mobileToggle {
+    display: flex;
+  }
+
+  .navLinks,
+  .userSection {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: rgba(5, 11, 20, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .navLinks {
+    top: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .userSection {
+    top: calc(100% + 200px);
+    /* Adjust based on navLinks height approx */
+    border-bottom: 1px solid var(--tech-primary);
+  }
+
+  /* Combined menu container logic handled in JSX structure usually, 
+       but here we are reusing existing divs. 
+       Let's simplify: We'll wrap both in a mobile container in JSX or target them together.
+       Actually, standard pattern: toggle class on a parent or separate standard nav from mobile nav.
+       Given the current structure, let's stack them.
+    */
+
+  .menuOpen .navLinks,
+  .menuOpen .userSection {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  /* Since we have two separate divs, let's handle them by just stacking them visually 
+       when open. We might need to restructure JSX slightly to wrap them for easier styling,
+       but CSS can handle it. 
+       Actually, simpler: put them in a container in JSX. 
+       For now, let's style them assuming we will wrap them or just target them.
+    */
+}

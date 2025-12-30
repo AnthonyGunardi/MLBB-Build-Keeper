@@ -1,0 +1,128 @@
+/* Hi-Tech Gaming UI - Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --tech-bg-deep: #050b14;
+  --tech-bg-surface: #0f1623;
+  --tech-bg-card: rgba(16, 24, 39, 0.7);
+
+  --tech-primary: #00f3ff;
+  --tech-primary-dim: rgba(0, 243, 255, 0.1);
+  --tech-primary-glow: rgba(0, 243, 255, 0.5);
+
+  --tech-secondary: #bc13fe;
+  --tech-secondary-dim: rgba(188, 19, 254, 0.1);
+
+  --tech-success: #0aff00;
+  --tech-warning: #ff9e00;
+  --tech-danger: #ff2a2a;
+
+  --tech-text-primary: #e0e6ed;
+  --tech-text-secondary: #94a3b8;
+  --tech-text-muted: #64748b;
+
+  /* Typography */
+  --font-heading: 'Orbitron', sans-serif;
+  --font-ui: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Borders & Shapes */
+  --tech-border: 1px solid rgba(255, 255, 255, 0.1);
+  --tech-border-glow: 1px solid rgba(0, 243, 255, 0.3);
+  --tech-radius-sm: 4px;
+  --tech-radius-md: 8px;
+  --tech-radius-lg: 16px;
+
+  /* Effects */
+  --tech-shadow-sm: 0 0 10px rgba(0, 243, 255, 0.05);
+  --tech-shadow-glow: 0 0 15px rgba(0, 243, 255, 0.3);
+  --tech-glass: blur(10px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--tech-bg-deep);
+  color: var(--tech-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(188, 19, 254, 0.05) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(0, 243, 255, 0.05) 0%, transparent 25%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: #fff;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+a {
+  color: var(--tech-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px var(--tech-primary);
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tech-bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tech-bg-surface);
+  border: 1px solid var(--tech-primary-dim);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tech-primary-dim);
+}
+
+/* Animations */
+@keyframes tech-pulse {
+  0% {
+    box-shadow: 0 0 5px var(--tech-primary-dim);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--tech-primary-glow);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--tech-primary-dim);
+  }
+}
+
+.tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Utility to hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,24 @@
+.heroTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--tech-primary);
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.heroTitle span {
+  color: #fff;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--tech-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+}

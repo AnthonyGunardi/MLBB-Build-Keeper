@@ -1,0 +1,102 @@
+# Dependency directories
+node_modules/
+bower_components/
+.pnp/
+.pnp.js
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Firebase
+.firebase/
+.firebase-debug.log*
+firebase-debug.log*
+firebase-debug.*.log*
+.firebaserc.local
+
+# Firebase Emulators (optional)
+# firebase.json
+# firestore.indexes.json
+# firestore.rules
+# storage.rules
+# database.rules.json
+# emulator-suite-*
+
+# Logs and error reports
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage and test output
+coverage/
+.nyc_output/
+*.lcov
+test-output/
+junit.xml
+
+# Compiled output
+/build/
+dist/
+out/
+lib-cov/
+web-build/
+.next/
+.expo/
+
+# File uploads (e.g., Multer or express-fileupload)
+tmp/
+temp/
+
+# Editor and system files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Static asset caches or artifacts
+.cache/
+.eslintcache
+.stylelintcache
+.yarn-integrity
+.yarn/*
+.pnpm-store/
+*.tgz
+
+# REPL and shell artifacts
+.node_repl_history
+*.orig.*
+*.rej
+*.bak
+
+# Security credentials and keys (use with caution!)
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.cert
+*.csr
+*.mobileprovision
+
+# OS-specific
+ehthumbs.db
+Desktop.ini
+
+# AI Agent
+.agent/
